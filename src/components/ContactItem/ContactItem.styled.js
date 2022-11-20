@@ -28,9 +28,9 @@ export const Button = styled.button`
   }
 `;
 
-export const Item = styled.li`
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  justify-content: center;
-`;
+// export const Item = styled.li`
+//   display: flex;
+//   align-items: center;
+//   padding: 10px;
+//   justify-content: center;
+// `;
