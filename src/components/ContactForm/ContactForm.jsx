@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/contactsSlice';
-import { getContacts } from '../../redux/selectors';
+import { addContact, getContacts } from '../../redux/contactsSlice';
 import Notiflix from 'notiflix';
 
 import { Form, Header, Input, Submit } from './ContactForm.styled';
