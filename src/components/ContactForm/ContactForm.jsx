@@ -1,12 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact, getContacts } from '../../redux/contactsSlice';
+import { addContact } from 'redux/operations';
+import { selectContacts } from 'redux/selectors';
 import Notiflix from 'notiflix';
 
 import { Form, Header, Input, Submit } from './ContactForm.styled';
 
 export default function ContactForm() {
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
 
   //----Добавляем контакты----
   function handleSubmit(event) {
@@ -22,9 +23,13 @@ export default function ContactForm() {
       );
     } else {
       dispatch(
-        addContact(form.elements.name.value, form.elements.number.value)
+        addContact({
+          name: form.elements.name.value,
+          phone: form.elements.number.value,
+        })
       );
     }
+
     form.reset();
   }
 
