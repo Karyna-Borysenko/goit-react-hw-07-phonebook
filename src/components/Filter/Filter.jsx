@@ -11,7 +11,7 @@ export const Filter = () => {
 
   //----Обновляем фильтр----
   function changeFilter(event) {
-    console.log(event.currentTarget.value);
+
     dispatch(contactsFilter(event.currentTarget.value));
   }
 
